@@ -4,23 +4,50 @@
 // documentation: https://zed.dev/docs/configuring-zed
 //
 // To see all of Zed's default settings without changing your
-// custom settings, run `zed: open default settings` from the
-// command palette (cmd-shift-p / ctrl-shift-p)
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
 {
   "agent": {
+    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4-5"
     },
-    "favorite_models": [],
     "model_parameters": []
   },
-  "icon_theme": "Zed (Default)",
-  "ui_font_size": 16,
-  "buffer_font_size": 15,
-  "theme": {
-    "mode": "light",
-    "light": "One Light",
-    "dark": "One Dark",
+  "ssh_connections": [
+    {
+      "host": "100.94.123.10",
+      "username": "kchauhan",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/kchauhan"
+          ]
+        },
+        {
+          "paths": [
+            "/home/kchauhan/repos/lllms"
+          ]
+        }
+      ]
+    }
+  ],
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "version": "2"
   },
+  "features": {
+    "copilot": false
+  },
+  "file_types": {
+    "HTML": ["html", "njk"]
+  },
+  "theme": "Catppuccin Latte",
+  "ui_font_size": 16,
+  "buffer_font_size": 16
 }
