@@ -6,7 +6,7 @@
 set -e
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PACKAGES=(bash fish git ghostty zellij zed alacritty gh claude)
+PACKAGES=(bash fish git ghostty zellij zed alacritty gh claude zsh)
 
 if ! command -v stow &>/dev/null; then
     echo "GNU Stow not found. Install it first:"

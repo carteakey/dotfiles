@@ -8,6 +8,19 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
+# ── Docker ────────────────────────────────────────────────────────────────────
+alias dcu='docker compose --env-file .env up -d'
+alias dcd='docker compose down'
+alias dps='docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
+alias dc-rebuild='docker compose up -V --remove-orphans --force-recreate'
+alias docker-clean='docker system prune -a --volumes --force'
+
+# ── Git ───────────────────────────────────────────────────────────────────────
+alias git-url='git config --get remote.origin.url'
+
+# ── Network ───────────────────────────────────────────────────────────────────
+alias ports='ss -tulpn | grep LISTEN'
+
 # Default editor
 export EDITOR=nvim
 export VISUAL=nvim
