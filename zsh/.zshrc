@@ -16,6 +16,9 @@ alias brew-tree='brew deps --tree --installed'
 # ── Network ───────────────────────────────────────────────────────────────────
 alias ports='lsof -i -P -n | grep LISTEN'
 
+# ── Ollama ────────────────────────────────────────────────────────────────────
+export OLLAMA_ORIGINS='chrome-extension://*'
+
 # ── NVM ───────────────────────────────────────────────────────────────────────
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
