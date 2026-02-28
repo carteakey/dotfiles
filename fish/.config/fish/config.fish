@@ -15,6 +15,9 @@ abbr -a git-url 'git config --get remote.origin.url'
 # ── Network ───────────────────────────────────────────────────────────────────
 abbr -a ports 'ss -tulpn | grep LISTEN'
 
+# ── SSH / Homelab ─────────────────────────────────────────────────────────────
+alias kpc='ssh kchauhan@100.94.123.10 -t "zellij attach --create main"'
+
 # Default editor
 set -gx EDITOR nvim
 set -gx VISUAL nvim
