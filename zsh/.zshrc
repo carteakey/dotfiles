@@ -19,6 +19,9 @@ alias ports='lsof -i -P -n | grep LISTEN'
 # ── SSH / Homelab ─────────────────────────────────────────────────────────────
 alias kpc='ssh kpc-ts -t "zellij attach --create main"'
 
+# ── Bitwarden SSH Agent (Mac App Store) ───────────────────────────────────────
+export SSH_AUTH_SOCK=~/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock
+
 # ── Ollama ────────────────────────────────────────────────────────────────────
 export OLLAMA_ORIGINS='chrome-extension://*'
 
