@@ -17,7 +17,7 @@ alias brew-tree='brew deps --tree --installed'
 alias ports='lsof -i -P -n | grep LISTEN'
 
 # ── SSH / Homelab ─────────────────────────────────────────────────────────────
-alias kpc='ssh kchauhan@100.94.123.10 -t "zellij attach --create main"'
+alias kpc='ssh kpc-ts -t "zellij attach --create main"'
 
 # ── Ollama ────────────────────────────────────────────────────────────────────
 export OLLAMA_ORIGINS='chrome-extension://*'
