@@ -7,6 +7,14 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "agent_servers": {
+    "codex-acp": {
+      "type": "registry"
+    }
+  },
   "agent": {
     "always_allow_tool_actions": true,
     "default_model": {

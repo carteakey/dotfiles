@@ -10,6 +10,9 @@ alias docker-clean='docker system prune -a --volumes --force'
 # ── Git ───────────────────────────────────────────────────────────────────────
 alias git-url='git config --get remote.origin.url'
 
+# ── Antigravity ───────────────────────────────────────────────────────────────
+alias agyolo="agy --dangerously-skip-permissions"
+
 # ── Brew ──────────────────────────────────────────────────────────────────────
 alias drink="brew update && brew upgrade && brew cleanup"
 alias brew-tree='brew deps --tree --installed'
@@ -36,6 +39,7 @@ alias agyolo="agy --dangerously-skip-permissions"
 export PATH="/Users/kchauhan/.local/bin:$PATH"
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export PATH="/Users/kchauhan/.antigravity/antigravity/bin:$PATH"
+export PATH="/Users/kchauhan/.antigravity-ide/antigravity-ide/bin:$PATH"
 
 # ── Machine-local overrides (conda, etc.) ────────────────────────────────────
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
