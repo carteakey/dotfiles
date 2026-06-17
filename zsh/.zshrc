@@ -11,6 +11,7 @@ alias docker-clean='docker system prune -a --volumes --force'
 alias git-url='git config --get remote.origin.url'
 
 # ── Brew ──────────────────────────────────────────────────────────────────────
+alias drink="brew update && brew upgrade && brew cleanup"
 alias brew-tree='brew deps --tree --installed'
 
 # ── Network ───────────────────────────────────────────────────────────────────
@@ -31,6 +32,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
 # ── PATH ──────────────────────────────────────────────────────────────────────
+alias agyolo="agy --dangerously-skip-permissions"
 export PATH="/Users/kchauhan/.local/bin:$PATH"
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export PATH="/Users/kchauhan/.antigravity/antigravity/bin:$PATH"
