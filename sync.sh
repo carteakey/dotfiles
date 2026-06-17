@@ -3,6 +3,16 @@ set -euo pipefail
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BACKUP_DIR="$HOME/.dotfiles-backups/$(date +%Y%m%d-%H%M%S)"
+PULL=true
+PUSH=true
+
+for arg in "$@"; do
+  case "$arg" in
+    --no-pull) PULL=false ;;
+    --no-push) PUSH=false ;;
+    *) echo "Unknown argument: $arg" >&2; exit 2 ;;
+  esac
+done
 
 link_file() {
   local src="$1"
@@ -22,7 +32,7 @@ link_file() {
   ln -s "$src" "$dest"
 }
 
-git -C "$DOTFILES_DIR" pull --rebase --autostash
+"$PULL" && git -C "$DOTFILES_DIR" pull --rebase --autostash
 
 while IFS= read -r file; do
   [[ "$file" == ".gitignore" || "$file" == "bootstrap.sh" || "$file" == "sync.sh" || "$file" == scripts/* ]] && continue
@@ -40,5 +50,9 @@ if ! git -C "$DOTFILES_DIR" diff --quiet || ! git -C "$DOTFILES_DIR" diff --cach
   exit 1
 fi
 
-git -C "$DOTFILES_DIR" push
-echo "Dotfiles synced both ways."
+if "$PUSH"; then
+  git -C "$DOTFILES_DIR" push
+  echo "Dotfiles synced both ways."
+else
+  echo "Dotfiles applied locally."
+fi
