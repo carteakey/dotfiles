@@ -48,14 +48,10 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-font-size = 10
-window-height = "29"
-window-width = "110"
-quick-terminal-position = "center"
-background = 000000
-foreground = ffffff
+
 background-opacity = 0.85
 background-blur = true
 window-padding-x = 9
 cursor-style = "underline"
 bold-is-bright = "true"
+shell-integration-features = ssh-terminfo

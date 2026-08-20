@@ -43,3 +43,4 @@ export PATH="/Users/kchauhan/.antigravity-ide/antigravity-ide/bin:$PATH"
 
 # ── Machine-local overrides (conda, etc.) ────────────────────────────────────
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+

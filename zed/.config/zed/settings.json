@@ -7,47 +7,98 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "proxy": "",
+  "edit_predictions": {
+    "allow_data_collection": "no"
+  },
   "session": {
     "trust_all_worktrees": true
   },
   "agent_servers": {
+    "opencode": {
+      "default_config_options": {
+        "effort": "high",
+        "model": "opencode/deepseek-v4-flash-free"
+      },
+      "type": "registry"
+    },
+    "pi-acp": {
+      "type": "registry"
+    },
     "codex-acp": {
+      "default_config_options": {
+        "fast-mode": false,
+        "reasoning_effort": "xhigh",
+        "mode": "agent-full-access",
+        "model": "gpt-5.6-sol"
+      },
       "type": "registry"
     }
   },
-  "agent": {
+  /* Duplicated key auto-commented: "agent": {
     "always_allow_tool_actions": true,
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4-5"
     },
     "model_parameters": []
-  },
+  }, */
   "ssh_connections": [
     {
-      "host": "100.94.123.10",
-      "username": "kchauhan",
+      "host": "m1",
       "args": [],
       "projects": [
         {
           "paths": [
-            "/home/kchauhan"
+            "/Users/kchauhan/repos"
           ]
         },
         {
           "paths": [
-            "/home/kchauhan/repos/lllms"
+            "/Users/kchauhan/repos/carteakey.dev"
+          ]
+        },
+        {
+          "paths": [
+            "/Users/kchauhan/repos/homelab"
+          ]
+        },
+        {
+          "paths": [
+            "/Users/kchauhan/repos/lytte"
+          ]
+        },
+        {
+          "paths": [
+            "/Users/kchauhan/wikis"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "yeti",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/kchauhan/repos"
+          ]
+        },
+        {
+          "paths": [
+            "/home/kchauhan/repos/l3ms"
           ]
         }
       ]
     }
   ],
-  "assistant": {
+  "agent": {
     "default_model": {
+      "effort": "high",
+      "enable_thinking": true,
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "claude-sonnet-5"
     },
-    "version": "2"
   },
   "features": {
     "copilot": false
@@ -55,7 +106,7 @@
   "file_types": {
     "HTML": ["html", "njk"]
   },
-  "theme": "Catppuccin Latte",
+  "theme": "One Light",
   "ui_font_size": 16,
-  "buffer_font_size": 16
+  "buffer_font_size": 12.0
 }
